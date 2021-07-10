@@ -308,4 +308,4 @@ function Invoke-VulnAD {
     VulnAD-PublicSMBShare
     Write-Good "Created Public SMB Share"
 }
-
+Invoke-VulnAD -UsersLimit 100 -DomainName "SHADOW.local"
