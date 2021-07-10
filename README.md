@@ -39,6 +39,5 @@ Create a vulnerable active directory that's allowing you to test most of active 
 # if you didn't install Active Directory yet , you can try 
 Install-ADDSForest -CreateDnsDelegation:$false -DatabasePath "C:\\Windows\\NTDS" -DomainMode "7" -DomainName "change.me" -DomainNetbiosName "change" -ForestMode "7" -InstallDns:$true -LogPath "C:\\Windows\\NTDS" -NoRebootOnCompletion:$false -SysvolPath "C:\\Windows\\SYSVOL" -Force:$true
 # if you already installed Active Directory, just run the script !
-IEX((new-object net.webclient).downloadstring("https://raw.githubusercontent.com/WaterExecution/vulnerable-AD-plus/master/vulnadplus.ps1"));
-Invoke-VulnAD -UsersLimit 100 -DomainName "change.me"
+ Import-Module .\vulnadplus.ps1;Invoke-VulnAD -UsersLimit 100 -DomainName "change.me"
 ```
