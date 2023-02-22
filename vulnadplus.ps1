@@ -606,5 +606,3 @@ function Invoke-VulnAD {
 	Write-Output "Restarting in 30 seconds..."
 	Sleep 30; Restart-Computer
 }
-
-Invoke-VulnAD -UsersLimit 100 -DomainName "change.me"
